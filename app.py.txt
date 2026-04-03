@@ -1,0 +1,45 @@
+# Decision Twin: AI Career Simulator
+
+print("=== Decision Twin: AI Career Simulator ===\n")
+
+# Take inputs from user
+skills = input("Enter your skills (comma separated): ").lower()
+interest = input("Enter your interest (e.g., tech, business, design): ").lower()
+strength = input("Enter your strength (e.g., problem solving, creativity, communication): ").lower()
+
+# Convert skills into list
+skills_list = skills.split(",")
+
+# AI Decision Logic
+career = ""
+
+if "coding" in skills_list or "python" in skills_list:
+    if "problem solving" in strength:
+        career = "Software Engineer"
+    else:
+        career = "Web Developer"
+
+elif "design" in skills_list or "creativity" in strength:
+    career = "UI/UX Designer"
+
+elif "communication" in strength or "business" in interest:
+    career = "Business Analyst / Manager"
+
+elif "data" in skills_list or "analysis" in strength:
+    career = "Data Analyst"
+
+elif "ai" in skills_list or "machine learning" in skills_list:
+    career = "AI Engineer"
+
+else:
+    career = "Explore multiple domains like IT, Business, or Design"
+
+# Output result
+print("\n🔍 Analyzing your profile...\n")
+print("🎯 Suggested Career Path:", career)
+
+# Extra suggestions
+print("\n💡 Recommendations:")
+print("- Improve relevant skills")
+print("- Take online courses")
+print("- Work on real-world projects")
